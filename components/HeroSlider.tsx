@@ -6,8 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+// components
 import CustomButton from "./CustomButton";
 import SwiperNavButtons from "./SwiperNavButtons";
+
+// animation
+import { motion } from "framer-motion";
+import { fadeIn } from "@/lib/variants";
 
 const Heroslider = () => {
   return (
@@ -15,9 +20,15 @@ const Heroslider = () => {
       <SwiperSlide>
         <div className="h-full flex justify-end pt-48">
           <div className="flex flex-col items-center lg:items-start lg:max-w-[700px]">
-            <h1 className="h1 text-center lg:text-left mb-2">
+            <motion.h1
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{once: false, amount: 0.2}}
+              className="h1 text-center lg:text-left mb-2"
+            >
               <span>Where hard</span> work meets succes
-            </h1>
+            </motion.h1>
             <p className="text-white italic text-center lg:text-left mb-4 ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quo
               commodi doloribus.

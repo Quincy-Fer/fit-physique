@@ -20,7 +20,10 @@ const Heroslider = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quo
             commodi doloribus.
           </p>
-          <CustomButton text='Get Started' containerStyles="w-[196px] h-[62px] " />
+          <CustomButton
+            text="Get Started"
+            containerStyles="w-[196px] h-[62px] "
+          />
         </div>
       </SwiperSlide>
     </Swiper>

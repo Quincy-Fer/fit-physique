@@ -14,7 +14,7 @@ const oswald = Oswald({
 
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ['100', '300' , '400', '500', '700', '900'],
+  weight: ["100", "300", "400", "500", "700", "900"],
   variable: "--font-roboto",
 });
 
@@ -29,8 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.variable} ${oswald.variable}`}>
+    <html lang="en" className="bg-gray-200">
+      <body
+        className={`${roboto.variable} ${oswald.variable} w-full max-w-[1920px] mx-auto bg-white `}
+      >
         <Header />
         {children}
         <Footer />

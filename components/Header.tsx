@@ -54,10 +54,23 @@ const Header = () => {
         left-0  text-base uppercase font-medium text-white bg-primary-200 transition-all w-full`}
         />
         {/* desktop nav hidden on mobile */}
-        <Nav containerStyles="flex xl:flex gap-4 hidden text-white" />
+        <Nav containerStyles="flex xl:flex gap-4 hidden text-white text-base uppercase font-medium transition-all" />
         {/* hide/open menu button */}
-        <div>
-          <button onClick={()=> setOpenNav(!openNav)} className="text-white xl:hidden">
+        <div className="flex items-center gap-4">
+          {/* login & register button */}
+          <div className="text-white flex items-center gap-4">
+            <button className="hover:text-accent transition-all text-base uppercase font-medium">
+              Login
+            </button>
+            <button className="hover:text-accent transition-all text-base uppercase font-medium">
+              Register
+            </button>
+          </div>
+
+          <button
+            onClick={() => setOpenNav(!openNav)}
+            className="text-white xl:hidden"
+          >
             <MdMenu className="text-4xl" />
           </button>
         </div>

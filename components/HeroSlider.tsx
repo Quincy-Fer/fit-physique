@@ -23,40 +23,73 @@ const Heroslider = () => {
             <motion.h1
               variants={fadeIn("up", 0.4)}
               initial="hidden"
-              whileInView={'show'}
-              viewport={{once: false, amount: 0.2}}
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
               className="h1 text-center lg:text-left mb-2"
             >
               <span>Where hard</span> work meets succes
             </motion.h1>
-            <p className="text-white italic text-center lg:text-left mb-4 ">
+            <motion.p
+              variants={fadeIn("up", 0.6)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className="text-white italic text-center lg:text-left mb-4 "
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quo
               commodi doloribus.
-            </p>
-            <CustomButton
-              text="Get Started"
-              containerStyles="w-[196px] h-[62px] "
-            />
+            </motion.p>
+            <motion.div
+              variants={fadeIn("up", 0.8)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+            >
+              <CustomButton
+                text="Get Started"
+                containerStyles="w-[196px] h-[62px] "
+              />
+            </motion.div>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className="h-full flex justify-end pt-48">
           <div className="flex flex-col items-center lg:items-start lg:max-w-[700px]">
-            <h1 className="h1 text-center lg:text-left mb-2">
+            <motion.h1
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className="h1 text-center lg:text-left mb-2"
+            >
               <span>Where hard</span> work meets succes
-            </h1>
-            <p className="text-white italic text-center lg:text-left mb-4 ">
+            </motion.h1>
+            <motion.p
+              variants={fadeIn("up", 0.6)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className="text-white italic text-center lg:text-left mb-4 "
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quo
               commodi doloribus.
-            </p>
-            <CustomButton
-              text="Get Started"
-              containerStyles="w-[196px] h-[62px] "
-            />
+            </motion.p>
+            <motion.div
+              variants={fadeIn("up", 0.8)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+            >
+              <CustomButton
+                text="Get Started"
+                containerStyles="w-[196px] h-[62px] "
+              />
+            </motion.div>
           </div>
         </div>
       </SwiperSlide>
+
       {/* swiper nav button */}
       <SwiperNavButtons
         containerStyles="absolute bottom-2 lg:bottom-0 right-0 h-[130px] w-full lg:w-[700px] 

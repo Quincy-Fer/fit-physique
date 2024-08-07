@@ -24,6 +24,7 @@ const Nav = ({ containerStyles }: { containerStyles: string }) => {
             smooth
             activeClass="active"
             key={index}
+            className="cursor-pointer hover:text-accent transition-all"
           >
             {link.name}
           </ScrollLink>

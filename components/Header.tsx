@@ -27,7 +27,7 @@ const Header = () => {
     <header
       className={`${
         headerActive ? "h-[100px]" : "h-[124px]"
-      } fixed left-0 right-0 w-full bg-primary-200 h-[100px] transition-all z-50`}
+      } fixed max-w-[1920px] top-0  w-full bg-primary-200 h-[100px] transition-all z-50`}
     >
       <div className="container mx-auto h-full flex items-center justify-between">
         {/* Logo */}

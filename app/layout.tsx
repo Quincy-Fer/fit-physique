@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${oswald.variable} ${roboto.variable}`}>
+      <body className={`${roboto.variable} ${oswald.variable}`}>
         <Header />
         {children}
         <Footer />

@@ -1,3 +1,4 @@
+import { Roboto } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -19,11 +20,11 @@ const config: Config = {
     },
     fontFamily: {
       oswald: 'var(--font-oswald)',
-      roboto: 'var(--roboto)'
+      roboto: 'var(--font-roboto)'
     },
     backgroundImage: {
       hero: 'url(/images/main-banner.jpg)',
-      membership: 'url(/images/membershipbg.jpg'
+      membership: 'url(/images/membershipbg.jpg)'
     },
 
     extend: {

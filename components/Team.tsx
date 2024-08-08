@@ -22,7 +22,7 @@ const trainerData = [
     ],
   },
   {
-    image: "/images/david.rosy",
+    image: "/images/rosy.jpg",
     name: "Rosy Rivers",
     role: "Bodybuilder Coach",
     description:
@@ -62,7 +62,22 @@ const trainerData = [
 const Team = () => {
   return (
     <section className="h-screen bg-red-300" id="team">
-      Team
+      <div className="container mx-auto">
+        <h2>Our Trainers</h2>
+        {/* trainers grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 mb-12">
+          {trainerData.map((item, index) => {
+            return (
+              <div key={index}>
+                {/* image  */}
+                <div className="relative  w-[320px] h-[360px] mx-auto mb-4">
+                  <Image src={item.image} alt="" fill />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };

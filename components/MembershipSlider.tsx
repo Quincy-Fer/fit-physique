@@ -125,9 +125,35 @@ const membershipData = [
 
 const MembershipSlider = () => {
   return (
-    <Swiper>
-      <SwiperSlide>slide 1</SwiperSlide>
-      <SwiperSlide>slide 2</SwiperSlide>
+    <Swiper
+      slidesPerView={1}
+      modules={[Pagination]}
+      pagination={{ clickable: true }}
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }}
+      className="min-h-[680px]"
+    >
+      {membershipData.map((item, index) => {
+        return (
+          <SwiperSlide key={index}>
+            <div className="border border-accent hover:bg-primary-300/80 transition-all duration-300 w-full
+            max-w-sm xl:max-w-none mx-auto">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Excepturi, illum nostrum eligendi iste obcaecati commodi?
+              Voluptates nobis eaque eligendi rem soluta velit reprehenderit
+              accusantium suscipit ullam consequatur incidunt, quae hic!
+            </div>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };

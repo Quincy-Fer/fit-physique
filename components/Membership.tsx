@@ -7,7 +7,7 @@ import MembershipSlider from "./MembershipSlider";
 const Membership = () => {
   return (
     <section
-      className="py-8 xl:py-0 lg:h-[95vh] bg-membership bg-cover bg-center relative 
+      className="py-8 xl:py-0  bg-membership bg-cover bg-center relative 
       before:w-full before:h-full before:bg-black/50 before:absolute before:top-0 before:z-10"
       id="prices"
     >

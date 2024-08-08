@@ -144,8 +144,13 @@ const MembershipSlider = () => {
       {membershipData.map((item, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="border border-accent hover:bg-primary-300/80 transition-all duration-300 w-full
-            max-w-sm xl:max-w-none mx-auto">
+            <div
+              className="border border-accent hover:bg-primary-300/80 transition-all duration-300 w-full
+            max-w-sm xl:max-w-none mx-auto"
+            >
+              <div className="py-5 px-[60px] border border-accent">
+                <h4 className="h4">{item.title}</h4>
+              </div>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Excepturi, illum nostrum eligendi iste obcaecati commodi?
               Voluptates nobis eaque eligendi rem soluta velit reprehenderit

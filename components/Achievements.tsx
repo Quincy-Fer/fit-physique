@@ -31,25 +31,34 @@ const stats = [
 ];
 
 const Achievements = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
     <section>
       <div className="container mx-auto">
-        <div>
+        <div className="grid grid-cols-2 md:grid-cols-4">
           {stats.map((item, index) => {
             return (
-              <div key={index}>
+              <div className="flex flex-col justify-center items-center" key={index}>
                 {/* circle outer */}
-                <div
-                  className="border border-accent/90 w-[140px] h-[140px] mx-auto rounded-full
-                p-1 mb-6"
-                >
+                <div className="border border-accent/90 w-[140px] h-[140px] mx-auto rounded-full p-1 mb-6">
                   {/* circle inner and counter */}
                   <div
+                    ref={ref}
                     className="border border-accent/30 w-full h-full flex items-center 
                     justify-center text-5xl rounded-full"
                   >
-                    <CountUp start={0} end={item.number} duration={6} />
+                    {/* render the countup animation only when inview */}
+                    {isInView && (
+                      <CountUp start={0} end={item.number} duration={6} />
+                    )}
                   </div>
+                </div>
+                {/* text */}
+                <div className="flex flex-col justify-center items-center text-center">
+                  <item.icon className="text-3xl mb-2" />
+                  <h4 className="h4">{item.text}</h4>
                 </div>
               </div>
             );

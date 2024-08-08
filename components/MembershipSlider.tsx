@@ -151,10 +151,19 @@ const MembershipSlider = () => {
               <div className="py-5 px-[60px] border border-accent">
                 <h4 className="h4">{item.title}</h4>
               </div>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Excepturi, illum nostrum eligendi iste obcaecati commodi?
-              Voluptates nobis eaque eligendi rem soluta velit reprehenderit
-              accusantium suscipit ullam consequatur incidunt, quae hic!
+              {/*  benefits */}
+              <div className="py-[30px] px-[60px]">
+                <ul className="flex flex-col gap-5 mb-7">
+                  {item.benefits.map((item, index) => {
+                    return (
+                      <li className="flex items-center gap-2" key={index}>
+                        <item.icon className="text-lg text-accent" />
+                        {item.text}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
           </SwiperSlide>
         );

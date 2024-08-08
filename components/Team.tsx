@@ -61,17 +61,37 @@ const trainerData = [
 
 const Team = () => {
   return (
-    <section className="h-screen bg-red-300" id="team">
-      <div className="container mx-auto">
-        <h2>Our Trainers</h2>
+    <section className="py-12 xl:h-[110vh]" id="team">
+      <div className="container mx-auto h-full flex flex-col justify-center items-center">
+        <h2 className="h2 text-center mb-6">Our Trainers</h2>
         {/* trainers grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 mb-12">
           {trainerData.map((item, index) => {
             return (
-              <div key={index}>
+              <div className="flex flex-col items-center text-center" key={index}>
                 {/* image  */}
                 <div className="relative  w-[320px] h-[360px] mx-auto mb-4">
                   <Image src={item.image} alt="" fill />
+                </div>
+                {/* text */}
+                <div>
+                  <h4 className="h4 mb-2">{item.name}</h4>
+                  <p className="uppercase text-xs tracking-[3px] mb-2">{item.role}</p>
+                  <p className="mb-6 max-w-[320px] mx-auto">{item.description}</p>
+                  <div className="flex gap-12 justify-center">
+                    {item.social.map((social, index) => {
+                      return (
+                        <div key={index}>
+                          <Link
+                            href={social.href}
+                            className="hover:text-accent transition-all"
+                          >
+                            <social.icon className="text-lg" />
+                          </Link>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             );

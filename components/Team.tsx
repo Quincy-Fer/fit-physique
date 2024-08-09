@@ -87,8 +87,8 @@ const Team = () => {
                 key={index}
               >
                 {/* image  */}
-                <div className="relative  w-[320px] h-[360px] mx-auto mb-4">
-                  <Image src={item.image} alt="" fill />
+                <div className="relative  w-[320px] h-[360px] mx-auto mb-4 ">
+                  <Image src={item.image} alt="" fill={true}  />
                 </div>
                 {/* text */}
                 <div>

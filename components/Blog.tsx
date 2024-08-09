@@ -73,11 +73,30 @@ const Blog = () => {
       <div className="container mx-auto">
         <h2 className="h2 text-center mb-8">Blogs</h2>
         <div>
-          <Swiper>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+              },
+              1400: {
+                slidesPerView: 4,
+                spaceBetween: 15,
+              },
+            }}
+
+            className="h-[420px] md:max-w-[660px] lg:max-w-none mb-8"
+          >
             {blogData.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div>
+                  <div className="flex flex-col justify-start h-full max-w-[320px] mx-auto">
                     <Image
                       src={item.img}
                       width={320}
@@ -85,12 +104,17 @@ const Blog = () => {
                       alt=""
                       className="mb-6"
                     />
-                  </div>
-                  <div>
-                    <p>{item.data}</p>
-                    <Link href={item.href}>
-                      <h5>{item.title}</h5>
-                    </Link>
+                    <div className="flex flex-col items-start">
+                      <p className="max-w-[380px] uppercase text-[12px] tracking-[3px] mb-1">
+                        {item.data}
+                      </p>
+                      <Link
+                        href={item.href}
+                        className="hover:text-accent transition-all duration-300"
+                      >
+                        <h5 className="h5">{item.title}</h5>
+                      </Link>
+                    </div>
                   </div>
                 </SwiperSlide>
               );

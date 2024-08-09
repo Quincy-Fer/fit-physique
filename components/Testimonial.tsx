@@ -106,8 +106,8 @@ const Testimonial = () => {
                     />
                     <div className="flex flex-col justify-center items-center">
                       <FaQuoteLeft className="text-2xl text-accent" />
-                      <p className="max-w-[380px] mb-4">{item.message}</p>
-                      <span className="text-2xl text-black">{item.name}</span>
+                      <p className="max-w-[380px] mb-4 text-gray-800">{item.message}</p>
+                      <span className="text-2xl text-black font-medium">{item.name}</span>
                     </div>
                   </div>
                 </SwiperSlide>

@@ -14,6 +14,7 @@ import SwiperNavButtons from "./SwiperNavButtons";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
 import Image from "next/image";
+import Link from "next/link";
 
 const blogData = [
   {
@@ -74,11 +75,25 @@ const Blog = () => {
         <div>
           <Swiper>
             {blogData.map((item, index) => {
-              return <SwiperSlide key={index}>
-                <div>
-                  <Image src={item.img} width={320} height={266} alt="" className="mb-6" />
-                </div>
-              </SwiperSlide>;
+              return (
+                <SwiperSlide key={index}>
+                  <div>
+                    <Image
+                      src={item.img}
+                      width={320}
+                      height={266}
+                      alt=""
+                      className="mb-6"
+                    />
+                  </div>
+                  <div>
+                    <p>{item.data}</p>
+                    <Link href={item.href}>
+                      <h5>{item.title}</h5>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              );
             })}
           </Swiper>
         </div>

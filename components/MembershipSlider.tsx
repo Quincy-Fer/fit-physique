@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { MdClose } from "react-icons/md";
 import { FaCheck } from "react-icons/fa6";
 
@@ -167,7 +166,7 @@ const MembershipSlider = () => {
                 <p className="text-accent mb-8 flex gap-1 items-center">
                   <sup className="text-4xl">$</sup>
                   <strong className="text-6xl">{item.price}</strong>
-                  <em className="self-end text-2xl"></em>
+                  <em className="self-end text-2xl">/month</em>
                 </p>
                 <CustomButton
                   text="Buy Now"

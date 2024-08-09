@@ -139,7 +139,31 @@ const Footer = () => {
             </div>
           </div>
           {/* newsletter */}
-          <div><h4 className="h4 text-accent">Newsletter</h4></div>
+          <div>
+            <h4 className="h4 text-accent">Newsletter</h4>
+            <div className="flex flex-col gap-4">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Molestias beatae doloribus magni accusantium
+              </p>
+              <form className="flex items-center">
+                <input
+                  type="text"
+                  placeholder="Your Email Adress"
+                  className="h-[50px] outline-none px-4 text-primary-300"
+                />
+                <CustomButton text="Send" containerStyles="h-[50px] px-8" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* copyright */}
+      <div className="text-white border-t border-white/20 py-12">
+        <div className="container mx-auto h-full">
+          <div>
+            <span>&copy;  Copyright 2024 FitPhysique</span>
+          </div>
         </div>
       </div>
     </footer>

@@ -47,11 +47,99 @@ const Footer = () => {
             </ul>
           </div>
           {/* blog */}
-          <div className="bg-pink-300/20">Blog</div>
+          <div>
+            <h4 className="h4 text-accent mb-4">Recent Blog Post</h4>
+            {/* post */}
+            <div className="border-b  border-gray-400 flex flex-col gap-3 pb-3 mb-4  ">
+              <Link href="#" className="hover:text-accent transition-all">
+                <h5 className="h5 leading-snug">
+                  How To Stay Motivated For All Exercises
+                </h5>
+              </Link>
+              <p className="text-gray-400 text-[12px] tracking-[3px] uppercase">
+                August 9, 2024
+              </p>
+            </div>
+            {/* post */}
+            <div className="border-b  border-gray-400 flex flex-col gap-3 pb-3 mb-4  ">
+              <Link href="#" className="hover:text-accent transition-all">
+                <h5 className="h5 leading-snug">
+                  How To Stay Motivated For All Exercises
+                </h5>
+              </Link>
+              <p className="text-gray-400 text-[12px] tracking-[3px] uppercase">
+                August 9, 2024
+              </p>
+            </div>
+            {/* post */}
+            <div className="border-b  border-gray-400 flex flex-col gap-3 pb-3 mb-4  ">
+              <Link href="#" className="hover:text-accent transition-all">
+                <h5 className="h5 leading-snug">
+                  How To Stay Motivated For All Exercises
+                </h5>
+              </Link>
+              <p className="text-gray-400 text-[12px] tracking-[3px] uppercase">
+                August 9, 2024
+              </p>
+            </div>
+          </div>
           {/* gallery */}
-          <div className="bg-pink-300/20">Gallery</div>
+          <div>
+            <h4 className="h4 text-accent mb-4">Gallery</h4>
+            {/* gallery images */}
+            <div className="flex flex-wrap gap-2">
+              <Link href="#">
+                <Image
+                  src={"/images/david.jpg"}
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src={"/images/matt.jpg"}
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src={"/images/rosy.jpg"}
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src={"/images/maria.jpg"}
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src={"/images/michael.jpg"}
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </Link>
+              <Link href="#">
+                <Image
+                  src={"/images/sofia.jpg"}
+                  width={100}
+                  height={100}
+                  alt=""
+                />
+              </Link>
+            </div>
+          </div>
           {/* newsletter */}
-          <div className="bg-pink-300/20">newsletter</div>
+          <div><h4 className="h4 text-accent">Newsletter</h4></div>
         </div>
       </div>
     </footer>

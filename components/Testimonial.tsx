@@ -61,8 +61,21 @@ const Testimonial = () => {
   return (
     <section className="py-12 xl:py-28" id="testimonial">
       <div className="container mx-auto">
-        <h2 className="h2 text-center">What others say</h2>
-        <div>
+        <motion.h2
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.2 }}
+          className="h2 text-center"
+        >
+          What others say
+        </motion.h2>
+        <motion.div
+          variants={fadeIn("up", 0.6)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.2 }}
+        >
           <Swiper
             className="h-[320px]"
             slidesPerView={1}
@@ -71,13 +84,13 @@ const Testimonial = () => {
             pagination={{ clickable: true }}
             breakpoints={{
               768: {
-                slidesPerView: 2, 
-                spaceBetween: 30
+                slidesPerView: 2,
+                spaceBetween: 30,
               },
               1024: {
-                slidesPerView: 3, 
-                spaceBetween: 30
-              }
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
             }}
           >
             {testimonialData.map((item, index) => {
@@ -101,7 +114,7 @@ const Testimonial = () => {
               );
             })}
           </Swiper>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

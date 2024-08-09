@@ -63,7 +63,23 @@ const Testimonial = () => {
       <div className="container mx-auto">
         <h2 className="h2 text-center">What others say</h2>
         <div>
-          <Swiper>
+          <Swiper
+            className="h-[320px]"
+            slidesPerView={1}
+            spaceBetween={30}
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              768: {
+                slidesPerView: 2, 
+                spaceBetween: 30
+              },
+              1024: {
+                slidesPerView: 3, 
+                spaceBetween: 30
+              }
+            }}
+          >
             {testimonialData.map((item, index) => {
               return (
                 <SwiperSlide key={index} className="h-full">

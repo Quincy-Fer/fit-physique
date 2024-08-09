@@ -59,8 +59,34 @@ const testimonialData = [
 
 const Testimonial = () => {
   return (
-    <section className="h-[50vh] bg-indigo-300" id="testimonial">
-      Testimonial
+    <section className="py-12 xl:py-28" id="testimonial">
+      <div className="container mx-auto">
+        <h2 className="h2 text-center">What others say</h2>
+        <div>
+          <Swiper>
+            {testimonialData.map((item, index) => {
+              return (
+                <SwiperSlide key={index} className="h-full">
+                  <div className="flex flex-col justify-center items-center gap-6 text-center h-full">
+                    <Image
+                      src={item.img}
+                      width={90}
+                      height={90}
+                      alt=""
+                      className="rounded-full border-2 border-accent"
+                    />
+                    <div className="flex flex-col justify-center items-center">
+                      <FaQuoteLeft className="text-2xl text-accent" />
+                      <p className="max-w-[380px] mb-4">{item.message}</p>
+                      <span className="text-2xl text-black">{item.name}</span>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+      </div>
     </section>
   );
 };

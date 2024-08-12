@@ -11,5 +11,6 @@ Assets can be found at: https://templatesjungle.com/downloads/fitphysique-free-f
 
 ## In order to view the website:
 
-1: npm run dev
-2: Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Clone repository
+- npm run dev
+- Open [http://localhost:3000](http://localhost:3000)  with your browser to see the result.
